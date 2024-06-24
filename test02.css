@@ -1,0 +1,26 @@
+.container {
+font-size: 14px;
+}
+.container .header {
+font-size: 18px;
+}
+.container .shop-list {
+list-style: none;
+margin-left: -15px;
+}
+.container .shop-list li.item {
+color: green;
+}
+
+.container .shop-list .item {
+    /* Explain why does this color not works, and how to fix make it work on
+1st list */
+
+/* 因為綠色的css樣式選擇器更為明確(多了li這個元素選擇器)，因此權重會比藍色的css樣式來得高。
+讓字體變藍色的方法：
+1. 同樣的element css樣式僅保留一個，直接移除綠色的css樣式
+2. 補上li元素選擇器，雖然階層一樣，但越寫在越後面的樣式樣式會蓋過前面的樣式
+3. 強制在藍色後面補上!important
+*/
+color: blue /*!important*/
+}
